@@ -1,155 +1,118 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary ❤️</title>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For My Moon ❤️</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="stars"></div>
-
-<audio id="bgMusic" loop>
-<source src="ssstik.io_1782987039673.mp3" type="audio/mpeg">
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<section id="home">
+<div id="hearts"></div>
 
-<h1>
-For My Moon 🌙
-</h1>
+<section class="hero">
 
-<h2>
-EBII ❤️
-</h2>
+<h1>Happy Anniversary ❤️</h1>
 
-<p style="margin-top:25px;font-size:20px;">
-A little surprise made with all my love.
+<p class="sub">
+Untuk perempuan terbaik yang selalu ada di hatiku.
 </p>
 
-<button onclick="startLove()">
-💖 Open Your Gift
+<button onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+Lihat Kenangan Kita 💕
 </button>
 
 </section>
-<section id="letterSection">
 
-<div id="letter">
+<section class="timer">
 
-<h3>💌 Untuk Moon</h3>
+<h2>❤️ Bersama Sejak ❤️</h2>
 
-<p id="typingLetter"></p>
+<h3>4 April 2026</h3>
 
-</div>
-
-</section>
-
-<section id="timeTogether">
-
-<h1>04 April 🤍</h1>
-
-<h2>Hari dimana semuanya dimulai.</h2>
-
-<div id="timer">
-
-❤️ Kita sudah bersama selama ❤️
-
-<span id="timerValue">
-0 Hari
-</span>
-
-</div>
+<div id="countup"></div>
 
 </section>
-<section id="gallerySection">
 
-<h1>Our Memories 📸</h1>
+<section id="gallery">
 
-<h2>
-Every picture has a story.
-</h2>
+<h2>Galeri Kenangan 📸</h2>
 
 <div class="gallery">
+  <img src="images/088bf0f924b298b0aa2aa23268daeee6.jpg" alt="Foto 1">
 
-<img src="images/1.jpg" alt="">
-<img src="images/2.jpg" alt="">
-<img src="images/3.jpg" alt="">
-<img src="images/4.jpg" alt="">
-<img src="images/5.jpg" alt="">
-<img src="images/6.jpg" alt="">
-<img src="images/7.jpg" alt="">
-<img src="images/8.jpg" alt="">
-<img src="images/9.jpg" alt="">
-<img src="images/10.jpg" alt="">
-<img src="images/11.jpg" alt="">
-<img src="images/12.jpg" alt="">
-<img src="images/13.jpg" alt="">
-<img src="images/14.jpg" alt="">
-<img src="images/15.jpg" alt="">
-<img src="images/16.jpg" alt="">
+<img src="images/8784b000ef493363860527645843cbf6.jpg" alt="Foto 2">
 
-</div>
+<img src="images/IMG-20260404-WA0050.jpg" alt="Foto 3">
 
-  </section>
-  <section id="ending">
+<img src="images/IMG-20260418-WA0024.jpg" alt="Foto 4">
 
-<h1>🌙</h1>
+<img src="images/IMG-20260419-WA0000.jpg" alt="Foto 5">
 
-<h2>
-No matter how many days pass...
-</h2>
+<img src="images/IMG-20260502-WA0018.jpg" alt="Foto 6">
 
-<div id="letter">
+<img src="images/IMG-20260527-WA0021.jpg" alt="Foto 7">
 
-<p style="text-align:center;">
+<img src="images/IMG-20260528-WA0012.jpg" alt="Foto 8">
 
-Kalau suatu hari nanti kita lupa
-seberapa jauh kita udah berjalan,
+<img src="images/IMG-20260613-WA0037.jpg" alt="Foto 9">
 
-semoga halaman kecil ini
-selalu ngingetin kalau
+<img src="images/IMG-20260630-WA0002.jpg" alt="Foto 10">
 
-semuanya berawal dari
-kita yang saling memilih.
+<img src="images/IMG-20260630-WA0005.jpg" alt="Foto 11">
 
-<br><br>
+<img src="images/Screenshot_20260423-195043.jpg" alt="Foto 12">
 
-Aku sayang kamu,
-hari ini, besok,
-dan seterusnya.
+<img src="images/Screenshot_20260423-195100.jpg" alt="Foto 13">
 
-<br><br>
+<img src="images/Screenshot_20260702-172952.jpg" alt="Foto 14">
 
-❤️ AFFI ❤️
+<img src="images/Screenshot_20260702-173024.jpg" alt="Foto 15">
 
-</p>
+<img src="images/Screenshot_2026_0306_181330.jpg" alt="Foto 16">
 
 </div>
-
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
-
-Back To The Beginning 🌸
-
-</button>
 
 </section>
+<section class="letter">
+
+<h2>💌 Surat Untukmu 💌</h2>
+
+<p>
+Sayang...
+
+Terima kasih sudah hadir dalam hidupku.
+Terima kasih sudah bertahan, menemani, dan mencintaiku sampai hari ini.
+
+Mungkin kita pernah berbeda pendapat, pernah saling membuat kecewa, bahkan pernah menangis. Tapi semua itu tidak pernah mengubah satu hal...
+
+Aku tetap memilih kamu.
+
+Aku ingin terus menciptakan kenangan bersamamu, tertawa bersamamu, dan melewati setiap hari denganmu.
+
+Semoga hubungan kita selalu dipenuhi kebahagiaan, kepercayaan, dan cinta yang semakin besar setiap harinya.
+
+Happy Anniversary, cintaku.
+
+I Love You Forever ❤️
+</p>
+
+</section>
+
+<footer>
+
+<p>
+Made with ❤️ by Raffi Ramanda Janggayo
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
