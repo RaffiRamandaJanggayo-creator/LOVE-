@@ -8,23 +8,24 @@
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background: linear-gradient(135deg,#ffb6c1,#c7a6ff,#a6d8ff);
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffb6c1,#c7a6ff,#a6d8ff);
     color:white;
     text-align:center;
     overflow-x:hidden;
 }
 
+/* HEADER */
 h1{margin-top:40px;font-size:32px}
 p{margin:10px 20px}
 
+/* SECTION */
 section{padding:40px 20px}
 
-#timer{
-    font-size:22px;
-    margin-top:10px;
-}
+/* TIMER */
+#timer{font-size:22px;margin-top:10px}
 
+/* GALLERY */
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -35,13 +36,19 @@ section{padding:40px 20px}
 .gallery img{
     width:100%;
     border-radius:12px;
+    transition:0.3s;
 }
 
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* HEART */
 .heart{
     position:fixed;
     top:-10px;
-    color:pink;
     font-size:20px;
+    color:pink;
     animation:fall linear forwards;
 }
 
@@ -52,6 +59,7 @@ section{padding:40px 20px}
     }
 }
 
+/* BUTTON */
 button{
     padding:10px 20px;
     border:none;
@@ -66,12 +74,16 @@ button{
 
 <body>
 
-<audio id="music" src="music.mp3" loop></audio>
+<!-- MUSIC ONLINE -->
+<audio id="music" src="https://files.catbox.moe/zfhuje.mp3" loop></audio>
 
 <h1>Happy Birthday & Anniversary ❤️</h1>
-<p>Sejak 4 April 2026, kamu jadi bagian terindah dalam hidupku.</p>
 
-<button onclick="document.getElementById('music').play()">Play Music 🎵</button>
+<p>Sejak 4 April 2026, kamu jadi bagian paling indah dalam hidupku.</p>
+
+<button onclick="document.getElementById('music').play()">
+Play Music 🎵
+</button>
 
 <section>
 <h2>Our Time Together</h2>
@@ -80,6 +92,7 @@ button{
 
 <section>
 <h2>Memories 📸</h2>
+
 <div class="gallery">
 
 <img src="images/088bf0f924b298b0aa2aa23268daeee6.jpg">
@@ -109,7 +122,7 @@ Aku tidak tahu bagaimana menjelaskannya dengan sempurna,<br><br>
 
 sejak 4 April 2026 kamu jadi alasan aku tersenyum setiap hari.<br><br>
 
-Terima kasih sudah ada.<br>
+Terima kasih sudah ada di hidupku.<br>
 Selamat ulang tahun ❤️
 </p>
 </section>
@@ -122,10 +135,10 @@ function updateTimer(){
     let now = new Date();
     let diff = now - startDate;
 
-    let days = Math.floor(diff / (1000*60*60*24));
-    let hours = Math.floor(diff / (1000*60*60)%24);
-    let minutes = Math.floor(diff / (1000*60)%60);
-    let seconds = Math.floor(diff / 1000%60);
+    let days = Math.floor(diff/(1000*60*60*24));
+    let hours = Math.floor(diff/(1000*60*60)%24);
+    let minutes = Math.floor(diff/(1000*60)%60);
+    let seconds = Math.floor(diff/1000%60);
 
     document.getElementById("timer").innerHTML =
     `${days} hari ${hours} jam ${minutes} menit ${seconds} detik ❤️`;
@@ -134,8 +147,7 @@ function updateTimer(){
 setInterval(updateTimer,1000);
 updateTimer();
 
-
-// HEARTS
+// FLOATING HEARTS
 function heart(){
     const h = document.createElement("div");
     h.classList.add("heart");
@@ -145,7 +157,13 @@ function heart(){
     document.body.appendChild(h);
     setTimeout(()=>h.remove(),5000);
 }
+
 setInterval(heart,300);
+
+// AUTO PLAY FIX (HP FRIENDLY)
+window.addEventListener("click", () => {
+    document.getElementById("music").play();
+});
 </script>
 
 </body>
