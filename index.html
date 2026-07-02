@@ -1,118 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#ffb6c1,#c7a6ff,#a6d8ff);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+h1{margin-top:40px;font-size:32px}
+p{margin:10px 20px}
+
+section{padding:40px 20px}
+
+#timer{
+    font-size:22px;
+    margin-top:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;
+    padding:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+}
+
+.heart{
+    position:fixed;
+    top:-10px;
+    color:pink;
+    font-size:20px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#ff4d88;
+    font-weight:bold;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
-<audio id="bgMusic" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
+<audio id="music" src="music.mp3" loop></audio>
 
-<div id="hearts"></div>
+<h1>Happy Birthday & Anniversary ❤️</h1>
+<p>Sejak 4 April 2026, kamu jadi bagian terindah dalam hidupku.</p>
 
-<section class="hero">
+<button onclick="document.getElementById('music').play()">Play Music 🎵</button>
 
-<h1>Happy Anniversary ❤️</h1>
-
-<p class="sub">
-Untuk perempuan terbaik yang selalu ada di hatiku.
-</p>
-
-<button onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
-Lihat Kenangan Kita 💕
-</button>
-
+<section>
+<h2>Our Time Together</h2>
+<div id="timer"></div>
 </section>
 
-<section class="timer">
-
-<h2>❤️ Bersama Sejak ❤️</h2>
-
-<h3>4 April 2026</h3>
-
-<div id="countup"></div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Galeri Kenangan 📸</h2>
-
+<section>
+<h2>Memories 📸</h2>
 <div class="gallery">
-  <img src="images/088bf0f924b298b0aa2aa23268daeee6.jpg" alt="Foto 1">
 
-<img src="images/8784b000ef493363860527645843cbf6.jpg" alt="Foto 2">
-
-<img src="images/IMG-20260404-WA0050.jpg" alt="Foto 3">
-
-<img src="images/IMG-20260418-WA0024.jpg" alt="Foto 4">
-
-<img src="images/IMG-20260419-WA0000.jpg" alt="Foto 5">
-
-<img src="images/IMG-20260502-WA0018.jpg" alt="Foto 6">
-
-<img src="images/IMG-20260527-WA0021.jpg" alt="Foto 7">
-
-<img src="images/IMG-20260528-WA0012.jpg" alt="Foto 8">
-
-<img src="images/IMG-20260613-WA0037.jpg" alt="Foto 9">
-
-<img src="images/IMG-20260630-WA0002.jpg" alt="Foto 10">
-
-<img src="images/IMG-20260630-WA0005.jpg" alt="Foto 11">
-
-<img src="images/Screenshot_20260423-195043.jpg" alt="Foto 12">
-
-<img src="images/Screenshot_20260423-195100.jpg" alt="Foto 13">
-
-<img src="images/Screenshot_20260702-172952.jpg" alt="Foto 14">
-
-<img src="images/Screenshot_20260702-173024.jpg" alt="Foto 15">
-
-<img src="images/Screenshot_2026_0306_181330.jpg" alt="Foto 16">
+<img src="images/088bf0f924b298b0aa2aa23268daeee6.jpg">
+<img src="images/8784b000ef493363860527645843cbf6.jpg">
+<img src="images/IMG-20260404-WA0050.jpg">
+<img src="images/IMG-20260418-WA0024.jpg">
+<img src="images/IMG-20260419-WA0000.jpg">
+<img src="images/IMG-20260502-WA0018.jpg">
+<img src="images/IMG-20260527-WA0021.jpg">
+<img src="images/IMG-20260528-WA0012.jpg">
+<img src="images/IMG-20260613-WA0037.jpg">
+<img src="images/IMG-20260630-WA0002.jpg">
+<img src="images/IMG-20260630-WA0005.jpg">
+<img src="images/Screenshot_20260423-195043.jpg">
+<img src="images/Screenshot_20260423-195100.jpg">
+<img src="images/Screenshot_20260702-172952.jpg">
+<img src="images/Screenshot_20260702-173024.jpg">
+<img src="images/Screenshot_2026_0306_181330.jpg">
 
 </div>
-
-</section>
-<section class="letter">
-
-<h2>💌 Surat Untukmu 💌</h2>
-
-<p>
-Sayang...
-
-Terima kasih sudah hadir dalam hidupku.
-Terima kasih sudah bertahan, menemani, dan mencintaiku sampai hari ini.
-
-Mungkin kita pernah berbeda pendapat, pernah saling membuat kecewa, bahkan pernah menangis. Tapi semua itu tidak pernah mengubah satu hal...
-
-Aku tetap memilih kamu.
-
-Aku ingin terus menciptakan kenangan bersamamu, tertawa bersamamu, dan melewati setiap hari denganmu.
-
-Semoga hubungan kita selalu dipenuhi kebahagiaan, kepercayaan, dan cinta yang semakin besar setiap harinya.
-
-Happy Anniversary, cintaku.
-
-I Love You Forever ❤️
-</p>
-
 </section>
 
-<footer>
-
+<section>
+<h2>Love Letter 💌</h2>
 <p>
-Made with ❤️ by Raffi Ramanda Janggayo
+Aku tidak tahu bagaimana menjelaskannya dengan sempurna,<br><br>
+
+sejak 4 April 2026 kamu jadi alasan aku tersenyum setiap hari.<br><br>
+
+Terima kasih sudah ada.<br>
+Selamat ulang tahun ❤️
 </p>
+</section>
 
-</footer>
+<script>
+// TIMER
+const startDate = new Date("2026-04-04T00:00:00");
 
-<script src="script.js"></script>
+function updateTimer(){
+    let now = new Date();
+    let diff = now - startDate;
+
+    let days = Math.floor(diff / (1000*60*60*24));
+    let hours = Math.floor(diff / (1000*60*60)%24);
+    let minutes = Math.floor(diff / (1000*60)%60);
+    let seconds = Math.floor(diff / 1000%60);
+
+    document.getElementById("timer").innerHTML =
+    `${days} hari ${hours} jam ${minutes} menit ${seconds} detik ❤️`;
+}
+
+setInterval(updateTimer,1000);
+updateTimer();
+
+
+// HEARTS
+function heart(){
+    const h = document.createElement("div");
+    h.classList.add("heart");
+    h.innerHTML = "❤️";
+    h.style.left = Math.random()*100+"vw";
+    h.style.animationDuration = (2+Math.random()*3)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+}
+setInterval(heart,300);
+</script>
 
 </body>
 </html>
